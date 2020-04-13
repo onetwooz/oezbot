@@ -19,7 +19,6 @@ def send_text(message):
 
     elif message.text.lower() in minia7:
         bot.send_message(message.chat.id, minia[minia7.index(message.text.lower())])
-    else:
-        bot.send_message(message.chat.id, 'Такого артикля нет')
+
 
 bot.polling(none_stop = True)
