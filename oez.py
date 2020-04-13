@@ -1,12 +1,14 @@
 import telebot
 from telebot import types
 import os
+import random
 
-bot = telebot.TeleBot('1107645949:AAE8h9eofOZ1EhfxCJ0jfPMzjZAMIdCeX5o')
+bot = telebot.TeleBot('1023733994:AAFCmwj-kiOfOW57APcXvZqnyBWCZnOMiBU')
+i = 1
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
-    bot.send_message(message.chat.id, 'Йо, {0.first_name}!\nЧо меняем? . '.format(message.from_user, bot.get_me(), parse_mode="html"))
+    bot.send_message(message.chat.id, 'Йо, {0.first_name}!\nЯ живой. '.format(message.from_user, bot.get_me(), parse_mode="html"))
 
 #@bot.message_handler(content_types=['text'])
 #def send_text(message):
