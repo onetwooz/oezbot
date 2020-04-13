@@ -6,7 +6,8 @@ bot = telebot.TeleBot('1107645949:AAE8h9eofOZ1EhfxCJ0jfPMzjZAMIdCeX5o')
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
-    bot.send_message(message.chat.id, 'Йо, {0.first_name}!\nЯ живой. '.format(message.from_user, bot.get_me(), parse_mode="html"))
+    bot.send_sticker(message.chat.id, 'CAACAgIAAxkBAAI-hl6JrcYcXMNK-Hlb3ItPeqCgPFzqAALqAgACtXHaBr_PemH5zBx1GAQ')
+    bot.send_message(message.chat.id, 'Hi, {0.first_name}!\nI am - {1.first_name}. I can show the video by the lesson number from the channel @scottbasslessons\nIn my collection there are almost all video lessons from 1 to 160\nYou give me the lesson number - I give you a video. '.format(message.from_user, bot.get_me(), parse_mode="html"))
 
 #@bot.message_handler(content_types=['text'])
 #def send_text(message):
